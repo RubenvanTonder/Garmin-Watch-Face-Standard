@@ -48,62 +48,26 @@ class StandardView extends WatchUi.WatchFace {
     // Update the view
     function onUpdate(dc as Dc) as Void {
 
-         // Get and show the current time
-        var clockTime = System.getClockTime();
-        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
-        var view = View.findDrawableById("TimeLabel") as Text;
-        view.setText(timeString);
+        // Function to get and show the current time
+        showCurrentTime();
 
-        // Get the total steps for today and format it correctly
-        steps = ActivityMonitor.getInfo().steps;
-        var stepDisplay = View.findDrawableById("Steps") as Text;
-        var stepsString = "Steps: " + steps.format("%d");
-        stepDisplay.setText(stepsString);
+        // Function to get the total steps for today and format it correctly
+        showDailySteps();
 
-        // Get the total Calories for today and format it correctly
-        cals = ActivityMonitor.getInfo().calories;
-        var calsDisplay = View.findDrawableById("Cals") as Text;
-        var calsString = "Cals: " + cals.format("%d");
-        calsDisplay.setText(calsString);
+        // Function to get the total Calories for today and format it correctly
+        showDailyCalories();
 
-        // Get HeartRate value and format it correctly
-        hrValue = Activity.getActivityInfo().currentHeartRate;
-        var hrDisplay = View.findDrawableById("hrValue") as Text;
-        if (hrValue != null){
-            var hrString = "HR: " + hrValue.format("%d");
-            hrDisplay.setText(hrString);
-        } else {
-            var hrString = "HR: --";
-            hrDisplay.setText(hrString);
-        }
+        // Function to get HeartRate value and format it correctly
+        showHeartRate();
 
         // Get the intensity minutes
-        intMinutes = ActivityMonitor.getInfo().activeMinutesWeek.total;
-        System.println(intMinutes);
-        var intMinutesDisplay = View.findDrawableById("IntMinutes")  as Text;
-        if (intMinutes != null){
-            var intMinutesString = "Int Minutes: " + intMinutes.format("%d");
-            intMinutesDisplay.setText(intMinutesString);  
-        } else {
-            var intMinutesString = "Int Minutes: --";
-            intMinutesDisplay.setText(intMinutesString);  
-        }
+        showIntensityMinutes();
               
-        
-        //Get Day of the week
-        var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var dayOfWeek = View.findDrawableById("DayOfWeek") as Text;
-        dayOfWeek.setText(["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][date.day_of_week - 1]);
+        // Function to get Day of the week
+        showDayOfWeek();
 
-        // Get the current battery percentage and format it correctly
-        var systemStat = System.getSystemStats();
-        batteryState = systemStat.battery;
-
-        //Get the date of today
-        var today = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
-        var dayString = today.day.format("%d");
-        var dayView = View.findDrawableById("DayOfMonth") as Text;
-        dayView.setText(dayString);
+        // Function to get the date of today
+        showDateOfToday();
 
         View.onUpdate(dc);
         
@@ -115,7 +79,10 @@ class StandardView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.drawRectangle(batteryX, batteryY, horizontalBatteryLines, verticalBatteryLines);
 
-        
+        // Get the current battery percentage and format it correctly
+        var systemStat = System.getSystemStats();
+        batteryState = systemStat.battery;
+
         // Determine batttery color
         if (batteryState>70){
             dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
@@ -125,40 +92,39 @@ class StandardView extends WatchUi.WatchFace {
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
         }
         dc.fillRectangle(batteryX + 2,  batteryY + 2, (horizontalBatteryLines-4)*batteryState/100, verticalBatteryLines-4);
+        
         // Draw HR bars
         if(hrValue != null){
-        
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        dc.fillRectangle(hrRecX + hrRecWidth , hrRecY, hrRecWidth, herRectheight);
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+            dc.fillRectangle(hrRecX + hrRecWidth , hrRecY, hrRecWidth, herRectheight);
 
-        dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
-        dc.fillRectangle(hrRecX + hrRecWidth*2 + 5, hrRecY, hrRecWidth, herRectheight);
+            dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
+            dc.fillRectangle(hrRecX + hrRecWidth*2 + 5, hrRecY, hrRecWidth, herRectheight);
 
-        dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
-        dc.fillRectangle(hrRecX + hrRecWidth*3 + 10, hrRecY, hrRecWidth, herRectheight);
+            dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
+            dc.fillRectangle(hrRecX + hrRecWidth*3 + 10, hrRecY, hrRecWidth, herRectheight);
 
-        dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
-        dc.fillRectangle(hrRecX + hrRecWidth*4 + 15, hrRecY, hrRecWidth, herRectheight);
+            dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
+            dc.fillRectangle(hrRecX + hrRecWidth*4 + 15, hrRecY, hrRecWidth, herRectheight);
 
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
-        dc.fillRectangle(hrRecX + hrRecWidth*5 + 20, hrRecY, hrRecWidth, herRectheight);
-       
+            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+            dc.fillRectangle(hrRecX + hrRecWidth*5 + 20, hrRecY, hrRecWidth, herRectheight);
        
             if (hrValue.toNumber() >=154){
-                    dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
-                    dc.fillRectangle(hrRecX + hrRecWidth*5 + 20, hrRecY-2, hrRecWidth, herRectheight+4);             
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+                dc.fillRectangle(hrRecX + hrRecWidth*5 + 20, hrRecY-2, hrRecWidth, herRectheight+4);             
             }else if (hrValue.toNumber() >=128){
-                    dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
-                    dc.fillRectangle(hrRecX + hrRecWidth*4 + 15, hrRecY-2, hrRecWidth, herRectheight+4);                
+                dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
+                dc.fillRectangle(hrRecX + hrRecWidth*4 + 15, hrRecY-2, hrRecWidth, herRectheight+4);                
             }else if (hrValue.toNumber() >=102){
-                    dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
-                    dc.fillRectangle(hrRecX + hrRecWidth*3 + 10, hrRecY-2, hrRecWidth, herRectheight+4);
+                dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
+                dc.fillRectangle(hrRecX + hrRecWidth*3 + 10, hrRecY-2, hrRecWidth, herRectheight+4);
             }else if (hrValue.toNumber() >=76){
-                    dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
-                    dc.fillRectangle(hrRecX + hrRecWidth*2 + 5, hrRecY-2, hrRecWidth, herRectheight+4);
+                dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
+                dc.fillRectangle(hrRecX + hrRecWidth*2 + 5, hrRecY-2, hrRecWidth, herRectheight+4);
             }else if (hrValue.toNumber() >=50){
-                    dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-                    dc.fillRectangle(hrRecX + hrRecWidth , hrRecY-2, hrRecWidth, herRectheight+4);
+                dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+                dc.fillRectangle(hrRecX + hrRecWidth , hrRecY-2, hrRecWidth, herRectheight+4);
             }
  	    }
 
@@ -179,4 +145,68 @@ class StandardView extends WatchUi.WatchFace {
     function onEnterSleep() as Void {
     }
 
+    // Get and show the current time
+    function showCurrentTime() as Void {
+        var clockTime = System.getClockTime();
+        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
+        var view = View.findDrawableById("TimeLabel") as Text;
+        view.setText(timeString);
+    }
+
+    // Get the total steps for today and format it correctly
+    function showDailySteps() as Void {
+        steps = ActivityMonitor.getInfo().steps;
+        var stepDisplay = View.findDrawableById("Steps") as Text;
+        var stepsString = "Steps: " + steps.format("%d");
+        stepDisplay.setText(stepsString);
+    }
+
+    // Get the total Calories for today and format it correctly
+    function showDailyCalories() as Void {
+        cals = ActivityMonitor.getInfo().calories;
+        var calsDisplay = View.findDrawableById("Cals") as Text;
+        var calsString = "Cals: " + cals.format("%d");
+        calsDisplay.setText(calsString);
+    }
+
+    // Get HeartRate value and format it correctly
+    function showHeartRate() as Void {
+        hrValue = Activity.getActivityInfo().currentHeartRate;
+        var hrDisplay = View.findDrawableById("hrValue") as Text;
+        if (hrValue != null){
+            var hrString = "HR: " + hrValue.format("%d");
+            hrDisplay.setText(hrString);
+        } else {
+            var hrString = "HR: --";
+            hrDisplay.setText(hrString);
+        }
+    }
+
+    // Get HeartRate value and format it correctly
+    function showIntensityMinutes() as Void {
+        intMinutes = ActivityMonitor.getInfo().activeMinutesWeek.total;
+        var intMinutesDisplay = View.findDrawableById("IntMinutes")  as Text;
+        if (intMinutes != null){
+            var intMinutesString = "Int Minutes: " + intMinutes.format("%d");
+            intMinutesDisplay.setText(intMinutesString);  
+        } else {
+            var intMinutesString = "Int Minutes: --";
+            intMinutesDisplay.setText(intMinutesString);  
+        }
+    }
+
+    // Get Day of the week
+    function showDayOfWeek() as Void {
+        var date = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var dayOfWeek = View.findDrawableById("DayOfWeek") as Text;
+        dayOfWeek.setText(["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][date.day_of_week - 1]);
+    }
+
+    // Get the date of today
+    function showDateOfToday() as Void {
+        var today = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+        var dayString = today.day.format("%d");
+        var dayView = View.findDrawableById("DayOfMonth") as Text;
+        dayView.setText(dayString);
+    }
 }
