@@ -8,8 +8,8 @@
     color="Graphics.COLOR_WHITE" />
 
     <label id="IntMinutes" 
-    x="30%" 
-    y="30%" 
+    x="80%" 
+    y="60%" 
     font="Graphics.FONT_XTINY" 
     justification="Graphics.TEXT_JUSTIFY_CENTER" 
     color="Graphics.COLOR_WHITE" />
@@ -36,9 +36,9 @@
     color="Graphics.COLOR_WHITE" />
 
     <label id="hrValue"
-    x="80%"
-    y="60%"
-    font="Graphics.FONT_XTINY"
+    x="50%"
+    y="85%"
+    font="Graphics.FONT_SMALL"
     justification="Graphics.TEXT_JUSTIFY_CENTER"
     color="Graphics.COLOR_WHITE" />
 

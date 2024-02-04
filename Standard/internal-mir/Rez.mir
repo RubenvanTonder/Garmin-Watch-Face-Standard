@@ -93,7 +93,7 @@ c_Garmin_Connect_Standard_gen_006_B3290_00_source_Rez_mcgen_13_73_29_8_start:
             %tmp.66 = aputv %tmp.65 %tmp.62 %tmp.64;
             %tmp.68 = const :locX;
             %tmp.69 = 260;
-            %tmp.70 = 30;
+            %tmp.70 = 80;
             %tmp.71 = 100.0;
             %tmp.72 = div %tmp.70 %tmp.71;
             %tmp.73 = mul %tmp.69 %tmp.72;
@@ -101,7 +101,7 @@ c_Garmin_Connect_Standard_gen_006_B3290_00_source_Rez_mcgen_13_73_29_8_start:
             %tmp.75 = aputv %tmp.74 %tmp.68 %tmp.73;
             %tmp.77 = const :locY;
             %tmp.78 = 260;
-            %tmp.79 = 30;
+            %tmp.79 = 60;
             %tmp.80 = 100.0;
             %tmp.81 = div %tmp.79 %tmp.80;
             %tmp.82 = mul %tmp.78 %tmp.81;
@@ -257,7 +257,7 @@ c_Garmin_Connect_Standard_gen_006_B3290_00_source_Rez_mcgen_13_73_29_8_start:
             %tmp.242 = aputv %tmp.241 %tmp.238 %tmp.240;
             %tmp.244 = const :locX;
             %tmp.245 = 260;
-            %tmp.246 = 80;
+            %tmp.246 = 50;
             %tmp.247 = 100.0;
             %tmp.248 = div %tmp.246 %tmp.247;
             %tmp.249 = mul %tmp.245 %tmp.248;
@@ -265,7 +265,7 @@ c_Garmin_Connect_Standard_gen_006_B3290_00_source_Rez_mcgen_13_73_29_8_start:
             %tmp.251 = aputv %tmp.250 %tmp.244 %tmp.249;
             %tmp.253 = const :locY;
             %tmp.254 = 260;
-            %tmp.255 = 60;
+            %tmp.255 = 85;
             %tmp.256 = 100.0;
             %tmp.257 = div %tmp.255 %tmp.256;
             %tmp.258 = mul %tmp.254 %tmp.257;
@@ -278,7 +278,7 @@ c_Garmin_Connect_Standard_gen_006_B3290_00_source_Rez_mcgen_13_73_29_8_start:
             %tmp.266 = aputv %tmp.265 %tmp.262 %tmp.264;
             %tmp.268 = const :font;
             %tmp.269 = getm $.Toybox.Graphics;
-            %tmp.270 = getv %tmp.269 :FONT_XTINY;
+            %tmp.270 = getv %tmp.269 :FONT_SMALL;
             %tmp.271 = dup %tmp.266;
             %tmp.272 = aputv %tmp.271 %tmp.268 %tmp.270;
             %tmp.227 = newc %tmp.230 (%tmp.272);

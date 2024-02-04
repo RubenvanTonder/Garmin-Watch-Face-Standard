@@ -28,6 +28,7 @@ class StandardView extends WatchUi.WatchFace {
     var hrRecWidth = 35;
     var herRectheight = 5;
     var intMinutes;
+    var x_point = 0;
 
     function initialize() {
         WatchFace.initialize();
@@ -109,23 +110,29 @@ class StandardView extends WatchUi.WatchFace {
 
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
             dc.fillRectangle(hrRecX + hrRecWidth*5 + 20, hrRecY, hrRecWidth, herRectheight);
-       
-            if (hrValue.toNumber() >=154){
+
+            hrValue = hrValue.toNumber();
+            if (hrValue >=154){
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
                 dc.fillRectangle(hrRecX + hrRecWidth*5 + 20, hrRecY-2, hrRecWidth, herRectheight+4);             
-            }else if (hrValue.toNumber() >=128){
+            }else if (hrValue >=128){
                 dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
                 dc.fillRectangle(hrRecX + hrRecWidth*4 + 15, hrRecY-2, hrRecWidth, herRectheight+4);                
-            }else if (hrValue.toNumber() >=102){
+            }else if (hrValue >=102){
                 dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
                 dc.fillRectangle(hrRecX + hrRecWidth*3 + 10, hrRecY-2, hrRecWidth, herRectheight+4);
-            }else if (hrValue.toNumber() >=76){
+            }else if (hrValue >=76){
                 dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
                 dc.fillRectangle(hrRecX + hrRecWidth*2 + 5, hrRecY-2, hrRecWidth, herRectheight+4);
-            }else if (hrValue.toNumber() >=50){
+            }else if (hrValue >=50){
                 dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
                 dc.fillRectangle(hrRecX + hrRecWidth , hrRecY-2, hrRecWidth, herRectheight+4);
             }
+
+            x_point = hrRecX + ((hrValue-30)*(200)/(130)) ;
+            System.println(x_point);
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+            dc.fillPolygon([[x_point,hrRecY+5], [x_point-10,hrRecY+25], [x_point+10,hrRecY+25]]);
  	    }
 
     }
@@ -174,11 +181,11 @@ class StandardView extends WatchUi.WatchFace {
         hrValue = Activity.getActivityInfo().currentHeartRate;
         var hrDisplay = View.findDrawableById("hrValue") as Text;
         if (hrValue != null){
-            var hrString = "HR: " + hrValue.format("%d");
+            var hrString = hrValue.format("%d");
             hrDisplay.setText(hrString);
         } else {
             var hrString = "HR: --";
-            hrDisplay.setText(hrString);
+            //hrDisplay.setText(hrString);
         }
     }
 
@@ -187,10 +194,10 @@ class StandardView extends WatchUi.WatchFace {
         intMinutes = ActivityMonitor.getInfo().activeMinutesWeek.total;
         var intMinutesDisplay = View.findDrawableById("IntMinutes")  as Text;
         if (intMinutes != null){
-            var intMinutesString = "Int Minutes: " + intMinutes.format("%d");
+            var intMinutesString = "Int: " + intMinutes.format("%d");
             intMinutesDisplay.setText(intMinutesString);  
         } else {
-            var intMinutesString = "Int Minutes: --";
+            var intMinutesString = "Int: 0";
             intMinutesDisplay.setText(intMinutesString);  
         }
     }

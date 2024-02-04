@@ -13,7 +13,7 @@ module Rez {
         function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
             var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (35 / 100.0)), :locY=>((260 - dc.getFontHeight(Graphics.FONT_SYSTEM_NUMBER_HOT)) * 0.5), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_HOT});
 
-            var rez_cmp_local_text_IntMinutes = new WatchUi.Text({:identifier=>"IntMinutes", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (30 / 100.0)), :locY=>(260 * (30 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+            var rez_cmp_local_text_IntMinutes = new WatchUi.Text({:identifier=>"IntMinutes", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (80 / 100.0)), :locY=>(260 * (60 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
 
             var rez_cmp_local_text_DayOfWeek = new WatchUi.Text({:identifier=>"DayOfWeek", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (80 / 100.0)), :locY=>(260 * (50 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_TINY});
 
@@ -21,7 +21,7 @@ module Rez {
 
             var rez_cmp_local_text_Steps = new WatchUi.Text({:identifier=>"Steps", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (20 / 100.0)), :locY=>(260 * (60 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
 
-            var rez_cmp_local_text_hrValue = new WatchUi.Text({:identifier=>"hrValue", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (80 / 100.0)), :locY=>(260 * (60 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+            var rez_cmp_local_text_hrValue = new WatchUi.Text({:identifier=>"hrValue", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (50 / 100.0)), :locY=>(260 * (85 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SMALL});
 
             var rez_cmp_local_text_Cals = new WatchUi.Text({:identifier=>"Cals", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (52 / 100.0)), :locY=>(260 * (60 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
 

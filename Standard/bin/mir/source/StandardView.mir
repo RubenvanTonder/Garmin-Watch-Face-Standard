@@ -61,19 +61,21 @@ class StandardView extends WatchUi.WatchFace{
     var herRectheight = 5;
     [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 30; @position = 8; ]
     var intMinutes;
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 32; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 31; @position = 8; ]
+    var x_point = 0;
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 33; ]
     function initialize() as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_32_26_35_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 33 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_33_26_36_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 34 8 ]
         %tmp.2 = getv ? :WatchFace;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Garmin_Connect_Standard_source_StandardView_mc_32_26_35_4_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_33_26_36_4_stop:
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 38; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 39; ]
     function onLayout(dc as Dc) as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_38_40_40_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 39 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_39_40_41_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 40 8 ]
         %tmp.1 = self;
         %tmp.2 = getv function %tmp.1 :setLayout;
         %tmp.4 = getv ? :Rez;
@@ -82,31 +84,31 @@ C_Garmin_Connect_Standard_source_StandardView_mc_38_40_40_4_start:
         %tmp.8 = lgetv %dc;
         %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
         invoke %tmp.1 %tmp.2(%tmp.9);
-C_Garmin_Connect_Standard_source_StandardView_mc_38_40_40_4_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_39_40_41_4_stop:
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 45; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 46; ]
     function onShow() as Void {
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 49; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 50; ]
     function onUpdate(dc as Dc) as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_49_40_133_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 52 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_50_40_138_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 53 8 ]
         %tmp.1 = self;
         %tmp.2 = getv function %tmp.1 :showCurrentTime;
         invoke %tmp.1 %tmp.2();
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 55 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 56 8 ]
         %tmp.3 = self;
         %tmp.4 = getv function %tmp.3 :showDailySteps;
         invoke %tmp.3 %tmp.4();
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 58 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 59 8 ]
         %tmp.5 = self;
         %tmp.6 = getv function %tmp.5 :showDailyCalories;
         invoke %tmp.5 %tmp.6();
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 61 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 62 8 ]
         %tmp.7 = self;
         %tmp.8 = getv function %tmp.7 :showHeartRate;
         invoke %tmp.7 %tmp.8();
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 64 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 65 8 ]
         %tmp.9 = self;
         %tmp.10 = getv function %tmp.9 :showIntensityMinutes;
         invoke %tmp.9 %tmp.10();
@@ -156,7 +158,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_49_40_133_4_start:
         %tmp.51 = getv ? :verticalBatteryLines;
         invoke %tmp.42 %tmp.43(%tmp.45, %tmp.47, %tmp.49, %tmp.51);
 [ "C:\Garmin Connect\Standard\source\StandardView.mc" 84 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_49_40_133_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_49_40_133_4_stop" ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_50_40_138_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_50_40_138_4_stop" ]
         %systemStat.1 = local;
         %tmp.52 = getm $.Toybox.System;
         %tmp.53 = getv function %tmp.52 :getSystemStats;
@@ -236,15 +238,15 @@ C_Garmin_Connect_Standard_source_StandardView_mc_88_8_94_8_if_end:
         %tmp.104 = 4;
         %tmp.105 = sub %tmp.103 %tmp.104;
         invoke %tmp.83 %tmp.84(%tmp.88, %tmp.92, %tmp.101, %tmp.105);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 97 8 ]
-C_Garmin_Connect_Standard_source_StandardView_mc_97_8_131_6_if_stmt:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 98 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_98_8_136_6_if_stmt:
         %tmp.107 = getv ? :hrValue;
         %tmp.108 = null;
         %tmp.109 = ne %tmp.107 %tmp.108;
-        bf %tmp.109 @C_Garmin_Connect_Standard_source_StandardView_mc_97_8_131_6_if_end;
-C_Garmin_Connect_Standard_source_StandardView_mc_97_8_131_6_if_true:
-C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 99 8 ]
+        bf %tmp.109 @C_Garmin_Connect_Standard_source_StandardView_mc_98_8_136_6_if_end;
+C_Garmin_Connect_Standard_source_StandardView_mc_98_8_136_6_if_true:
+C_Garmin_Connect_Standard_source_StandardView_mc_98_27_136_6_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 99 12 ]
         %tmp.110 = lgetv %dc;
         %tmp.111 = getv function %tmp.110 :setColor;
         %tmp.112 = getm $.Toybox.Graphics;
@@ -252,7 +254,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.114 = getm $.Toybox.Graphics;
         %tmp.115 = getv %tmp.114 :COLOR_BLACK;
         invoke %tmp.110 %tmp.111(%tmp.113, %tmp.115);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 100 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 100 12 ]
         %tmp.116 = lgetv %dc;
         %tmp.117 = getv function %tmp.116 :fillRectangle;
         %tmp.119 = getv ? :hrRecX;
@@ -262,7 +264,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.126 = getv ? :hrRecWidth;
         %tmp.128 = getv ? :herRectheight;
         invoke %tmp.116 %tmp.117(%tmp.122, %tmp.124, %tmp.126, %tmp.128);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 102 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 102 12 ]
         %tmp.129 = lgetv %dc;
         %tmp.130 = getv function %tmp.129 :setColor;
         %tmp.131 = getm $.Toybox.Graphics;
@@ -270,7 +272,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.133 = getm $.Toybox.Graphics;
         %tmp.134 = getv %tmp.133 :COLOR_BLACK;
         invoke %tmp.129 %tmp.130(%tmp.132, %tmp.134);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 103 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 103 12 ]
         %tmp.135 = lgetv %dc;
         %tmp.136 = getv function %tmp.135 :fillRectangle;
         %tmp.138 = getv ? :hrRecX;
@@ -284,7 +286,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.149 = getv ? :hrRecWidth;
         %tmp.151 = getv ? :herRectheight;
         invoke %tmp.135 %tmp.136(%tmp.145, %tmp.147, %tmp.149, %tmp.151);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 105 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 105 12 ]
         %tmp.152 = lgetv %dc;
         %tmp.153 = getv function %tmp.152 :setColor;
         %tmp.154 = getm $.Toybox.Graphics;
@@ -292,7 +294,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.156 = getm $.Toybox.Graphics;
         %tmp.157 = getv %tmp.156 :COLOR_BLACK;
         invoke %tmp.152 %tmp.153(%tmp.155, %tmp.157);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 106 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 106 12 ]
         %tmp.158 = lgetv %dc;
         %tmp.159 = getv function %tmp.158 :fillRectangle;
         %tmp.161 = getv ? :hrRecX;
@@ -306,7 +308,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.172 = getv ? :hrRecWidth;
         %tmp.174 = getv ? :herRectheight;
         invoke %tmp.158 %tmp.159(%tmp.168, %tmp.170, %tmp.172, %tmp.174);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 108 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 108 12 ]
         %tmp.175 = lgetv %dc;
         %tmp.176 = getv function %tmp.175 :setColor;
         %tmp.177 = getm $.Toybox.Graphics;
@@ -314,7 +316,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.179 = getm $.Toybox.Graphics;
         %tmp.180 = getv %tmp.179 :COLOR_BLACK;
         invoke %tmp.175 %tmp.176(%tmp.178, %tmp.180);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 109 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 109 12 ]
         %tmp.181 = lgetv %dc;
         %tmp.182 = getv function %tmp.181 :fillRectangle;
         %tmp.184 = getv ? :hrRecX;
@@ -328,7 +330,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.195 = getv ? :hrRecWidth;
         %tmp.197 = getv ? :herRectheight;
         invoke %tmp.181 %tmp.182(%tmp.191, %tmp.193, %tmp.195, %tmp.197);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 111 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 111 12 ]
         %tmp.198 = lgetv %dc;
         %tmp.199 = getv function %tmp.198 :setColor;
         %tmp.200 = getm $.Toybox.Graphics;
@@ -336,7 +338,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.202 = getm $.Toybox.Graphics;
         %tmp.203 = getv %tmp.202 :COLOR_BLACK;
         invoke %tmp.198 %tmp.199(%tmp.201, %tmp.203);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 112 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 112 12 ]
         %tmp.204 = lgetv %dc;
         %tmp.205 = getv function %tmp.204 :fillRectangle;
         %tmp.207 = getv ? :hrRecX;
@@ -350,56 +352,57 @@ C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_start:
         %tmp.218 = getv ? :hrRecWidth;
         %tmp.220 = getv ? :herRectheight;
         invoke %tmp.204 %tmp.205(%tmp.214, %tmp.216, %tmp.218, %tmp.220);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 115 12 ]
-C_Garmin_Connect_Standard_source_StandardView_mc_115_12_130_12_if_stmt:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 114 12 ]
         %tmp.222 = getv ? :hrValue;
         %tmp.223 = getv function %tmp.222 :toNumber;
         %tmp.224 = invoke %tmp.222 %tmp.223();
-        %tmp.225 = 154;
-        %tmp.226 = gte %tmp.224 %tmp.225;
-        bf %tmp.226 @C_Garmin_Connect_Standard_source_StandardView_mc_115_12_130_12_if_false;
+        putv self :hrValue %tmp.224;
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 115 12 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_115_12_130_12_if_stmt:
+        %tmp.226 = getv ? :hrValue;
+        %tmp.227 = 154;
+        %tmp.228 = gte %tmp.226 %tmp.227;
+        bf %tmp.228 @C_Garmin_Connect_Standard_source_StandardView_mc_115_12_130_12_if_false;
 C_Garmin_Connect_Standard_source_StandardView_mc_115_12_130_12_if_true:
-C_Garmin_Connect_Standard_source_StandardView_mc_115_41_118_12_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 116 20 ]
-        %tmp.227 = lgetv %dc;
-        %tmp.228 = getv function %tmp.227 :setColor;
-        %tmp.229 = getm $.Toybox.Graphics;
-        %tmp.230 = getv %tmp.229 :COLOR_RED;
+C_Garmin_Connect_Standard_source_StandardView_mc_115_30_118_12_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 116 16 ]
+        %tmp.229 = lgetv %dc;
+        %tmp.230 = getv function %tmp.229 :setColor;
         %tmp.231 = getm $.Toybox.Graphics;
-        %tmp.232 = getv %tmp.231 :COLOR_BLACK;
-        invoke %tmp.227 %tmp.228(%tmp.230, %tmp.232);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 117 20 ]
-        %tmp.233 = lgetv %dc;
-        %tmp.234 = getv function %tmp.233 :fillRectangle;
-        %tmp.236 = getv ? :hrRecX;
-        %tmp.238 = getv ? :hrRecWidth;
-        %tmp.239 = 5;
-        %tmp.240 = mul %tmp.238 %tmp.239;
-        %tmp.241 = add %tmp.236 %tmp.240;
-        %tmp.242 = 20;
-        %tmp.243 = add %tmp.241 %tmp.242;
-        %tmp.245 = getv ? :hrRecY;
-        %tmp.246 = 2;
-        %tmp.247 = sub %tmp.245 %tmp.246;
-        %tmp.249 = getv ? :hrRecWidth;
-        %tmp.251 = getv ? :herRectheight;
-        %tmp.252 = 4;
-        %tmp.253 = add %tmp.251 %tmp.252;
-        invoke %tmp.233 %tmp.234(%tmp.243, %tmp.247, %tmp.249, %tmp.253);
-C_Garmin_Connect_Standard_source_StandardView_mc_115_41_118_12_stop:
+        %tmp.232 = getv %tmp.231 :COLOR_RED;
+        %tmp.233 = getm $.Toybox.Graphics;
+        %tmp.234 = getv %tmp.233 :COLOR_BLACK;
+        invoke %tmp.229 %tmp.230(%tmp.232, %tmp.234);
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 117 16 ]
+        %tmp.235 = lgetv %dc;
+        %tmp.236 = getv function %tmp.235 :fillRectangle;
+        %tmp.238 = getv ? :hrRecX;
+        %tmp.240 = getv ? :hrRecWidth;
+        %tmp.241 = 5;
+        %tmp.242 = mul %tmp.240 %tmp.241;
+        %tmp.243 = add %tmp.238 %tmp.242;
+        %tmp.244 = 20;
+        %tmp.245 = add %tmp.243 %tmp.244;
+        %tmp.247 = getv ? :hrRecY;
+        %tmp.248 = 2;
+        %tmp.249 = sub %tmp.247 %tmp.248;
+        %tmp.251 = getv ? :hrRecWidth;
+        %tmp.253 = getv ? :herRectheight;
+        %tmp.254 = 4;
+        %tmp.255 = add %tmp.253 %tmp.254;
+        invoke %tmp.235 %tmp.236(%tmp.245, %tmp.249, %tmp.251, %tmp.255);
+C_Garmin_Connect_Standard_source_StandardView_mc_115_30_118_12_stop:
         goto @C_Garmin_Connect_Standard_source_StandardView_mc_115_12_130_12_if_end;
 C_Garmin_Connect_Standard_source_StandardView_mc_115_12_130_12_if_false:
 [ "C:\Garmin Connect\Standard\source\StandardView.mc" 118 18 ]
 C_Garmin_Connect_Standard_source_StandardView_mc_118_18_130_12_if_stmt:
-        %tmp.255 = getv ? :hrValue;
-        %tmp.256 = getv function %tmp.255 :toNumber;
-        %tmp.257 = invoke %tmp.255 %tmp.256();
+        %tmp.257 = getv ? :hrValue;
         %tmp.258 = 128;
         %tmp.259 = gte %tmp.257 %tmp.258;
         bf %tmp.259 @C_Garmin_Connect_Standard_source_StandardView_mc_118_18_130_12_if_false;
 C_Garmin_Connect_Standard_source_StandardView_mc_118_18_130_12_if_true:
-C_Garmin_Connect_Standard_source_StandardView_mc_118_47_121_12_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 119 20 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_118_36_121_12_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 119 16 ]
         %tmp.260 = lgetv %dc;
         %tmp.261 = getv function %tmp.260 :setColor;
         %tmp.262 = getm $.Toybox.Graphics;
@@ -407,7 +410,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_118_47_121_12_start:
         %tmp.264 = getm $.Toybox.Graphics;
         %tmp.265 = getv %tmp.264 :COLOR_BLACK;
         invoke %tmp.260 %tmp.261(%tmp.263, %tmp.265);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 120 20 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 120 16 ]
         %tmp.266 = lgetv %dc;
         %tmp.267 = getv function %tmp.266 :fillRectangle;
         %tmp.269 = getv ? :hrRecX;
@@ -425,152 +428,212 @@ C_Garmin_Connect_Standard_source_StandardView_mc_118_47_121_12_start:
         %tmp.285 = 4;
         %tmp.286 = add %tmp.284 %tmp.285;
         invoke %tmp.266 %tmp.267(%tmp.276, %tmp.280, %tmp.282, %tmp.286);
-C_Garmin_Connect_Standard_source_StandardView_mc_118_47_121_12_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_118_36_121_12_stop:
         goto @C_Garmin_Connect_Standard_source_StandardView_mc_118_18_130_12_if_end;
 C_Garmin_Connect_Standard_source_StandardView_mc_118_18_130_12_if_false:
 [ "C:\Garmin Connect\Standard\source\StandardView.mc" 121 18 ]
 C_Garmin_Connect_Standard_source_StandardView_mc_121_18_130_12_if_stmt:
         %tmp.288 = getv ? :hrValue;
-        %tmp.289 = getv function %tmp.288 :toNumber;
-        %tmp.290 = invoke %tmp.288 %tmp.289();
-        %tmp.291 = 102;
-        %tmp.292 = gte %tmp.290 %tmp.291;
-        bf %tmp.292 @C_Garmin_Connect_Standard_source_StandardView_mc_121_18_130_12_if_false;
+        %tmp.289 = 102;
+        %tmp.290 = gte %tmp.288 %tmp.289;
+        bf %tmp.290 @C_Garmin_Connect_Standard_source_StandardView_mc_121_18_130_12_if_false;
 C_Garmin_Connect_Standard_source_StandardView_mc_121_18_130_12_if_true:
-C_Garmin_Connect_Standard_source_StandardView_mc_121_47_124_12_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 122 20 ]
-        %tmp.293 = lgetv %dc;
-        %tmp.294 = getv function %tmp.293 :setColor;
+C_Garmin_Connect_Standard_source_StandardView_mc_121_36_124_12_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 122 16 ]
+        %tmp.291 = lgetv %dc;
+        %tmp.292 = getv function %tmp.291 :setColor;
+        %tmp.293 = getm $.Toybox.Graphics;
+        %tmp.294 = getv %tmp.293 :COLOR_YELLOW;
         %tmp.295 = getm $.Toybox.Graphics;
-        %tmp.296 = getv %tmp.295 :COLOR_YELLOW;
-        %tmp.297 = getm $.Toybox.Graphics;
-        %tmp.298 = getv %tmp.297 :COLOR_BLACK;
-        invoke %tmp.293 %tmp.294(%tmp.296, %tmp.298);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 123 20 ]
-        %tmp.299 = lgetv %dc;
-        %tmp.300 = getv function %tmp.299 :fillRectangle;
-        %tmp.302 = getv ? :hrRecX;
-        %tmp.304 = getv ? :hrRecWidth;
-        %tmp.305 = 3;
-        %tmp.306 = mul %tmp.304 %tmp.305;
-        %tmp.307 = add %tmp.302 %tmp.306;
-        %tmp.308 = 10;
-        %tmp.309 = add %tmp.307 %tmp.308;
-        %tmp.311 = getv ? :hrRecY;
-        %tmp.312 = 2;
-        %tmp.313 = sub %tmp.311 %tmp.312;
-        %tmp.315 = getv ? :hrRecWidth;
-        %tmp.317 = getv ? :herRectheight;
-        %tmp.318 = 4;
-        %tmp.319 = add %tmp.317 %tmp.318;
-        invoke %tmp.299 %tmp.300(%tmp.309, %tmp.313, %tmp.315, %tmp.319);
-C_Garmin_Connect_Standard_source_StandardView_mc_121_47_124_12_stop:
+        %tmp.296 = getv %tmp.295 :COLOR_BLACK;
+        invoke %tmp.291 %tmp.292(%tmp.294, %tmp.296);
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 123 16 ]
+        %tmp.297 = lgetv %dc;
+        %tmp.298 = getv function %tmp.297 :fillRectangle;
+        %tmp.300 = getv ? :hrRecX;
+        %tmp.302 = getv ? :hrRecWidth;
+        %tmp.303 = 3;
+        %tmp.304 = mul %tmp.302 %tmp.303;
+        %tmp.305 = add %tmp.300 %tmp.304;
+        %tmp.306 = 10;
+        %tmp.307 = add %tmp.305 %tmp.306;
+        %tmp.309 = getv ? :hrRecY;
+        %tmp.310 = 2;
+        %tmp.311 = sub %tmp.309 %tmp.310;
+        %tmp.313 = getv ? :hrRecWidth;
+        %tmp.315 = getv ? :herRectheight;
+        %tmp.316 = 4;
+        %tmp.317 = add %tmp.315 %tmp.316;
+        invoke %tmp.297 %tmp.298(%tmp.307, %tmp.311, %tmp.313, %tmp.317);
+C_Garmin_Connect_Standard_source_StandardView_mc_121_36_124_12_stop:
         goto @C_Garmin_Connect_Standard_source_StandardView_mc_121_18_130_12_if_end;
 C_Garmin_Connect_Standard_source_StandardView_mc_121_18_130_12_if_false:
 [ "C:\Garmin Connect\Standard\source\StandardView.mc" 124 18 ]
 C_Garmin_Connect_Standard_source_StandardView_mc_124_18_130_12_if_stmt:
-        %tmp.321 = getv ? :hrValue;
-        %tmp.322 = getv function %tmp.321 :toNumber;
-        %tmp.323 = invoke %tmp.321 %tmp.322();
-        %tmp.324 = 76;
-        %tmp.325 = gte %tmp.323 %tmp.324;
-        bf %tmp.325 @C_Garmin_Connect_Standard_source_StandardView_mc_124_18_130_12_if_false;
+        %tmp.319 = getv ? :hrValue;
+        %tmp.320 = 76;
+        %tmp.321 = gte %tmp.319 %tmp.320;
+        bf %tmp.321 @C_Garmin_Connect_Standard_source_StandardView_mc_124_18_130_12_if_false;
 C_Garmin_Connect_Standard_source_StandardView_mc_124_18_130_12_if_true:
-C_Garmin_Connect_Standard_source_StandardView_mc_124_46_127_12_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 125 20 ]
-        %tmp.326 = lgetv %dc;
-        %tmp.327 = getv function %tmp.326 :setColor;
-        %tmp.328 = getm $.Toybox.Graphics;
-        %tmp.329 = getv %tmp.328 :COLOR_GREEN;
-        %tmp.330 = getm $.Toybox.Graphics;
-        %tmp.331 = getv %tmp.330 :COLOR_BLACK;
-        invoke %tmp.326 %tmp.327(%tmp.329, %tmp.331);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 126 20 ]
-        %tmp.332 = lgetv %dc;
-        %tmp.333 = getv function %tmp.332 :fillRectangle;
-        %tmp.335 = getv ? :hrRecX;
-        %tmp.337 = getv ? :hrRecWidth;
-        %tmp.338 = 2;
-        %tmp.339 = mul %tmp.337 %tmp.338;
-        %tmp.340 = add %tmp.335 %tmp.339;
-        %tmp.341 = 5;
-        %tmp.342 = add %tmp.340 %tmp.341;
-        %tmp.344 = getv ? :hrRecY;
-        %tmp.345 = 2;
-        %tmp.346 = sub %tmp.344 %tmp.345;
-        %tmp.348 = getv ? :hrRecWidth;
-        %tmp.350 = getv ? :herRectheight;
-        %tmp.351 = 4;
-        %tmp.352 = add %tmp.350 %tmp.351;
-        invoke %tmp.332 %tmp.333(%tmp.342, %tmp.346, %tmp.348, %tmp.352);
-C_Garmin_Connect_Standard_source_StandardView_mc_124_46_127_12_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_124_35_127_12_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 125 16 ]
+        %tmp.322 = lgetv %dc;
+        %tmp.323 = getv function %tmp.322 :setColor;
+        %tmp.324 = getm $.Toybox.Graphics;
+        %tmp.325 = getv %tmp.324 :COLOR_GREEN;
+        %tmp.326 = getm $.Toybox.Graphics;
+        %tmp.327 = getv %tmp.326 :COLOR_BLACK;
+        invoke %tmp.322 %tmp.323(%tmp.325, %tmp.327);
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 126 16 ]
+        %tmp.328 = lgetv %dc;
+        %tmp.329 = getv function %tmp.328 :fillRectangle;
+        %tmp.331 = getv ? :hrRecX;
+        %tmp.333 = getv ? :hrRecWidth;
+        %tmp.334 = 2;
+        %tmp.335 = mul %tmp.333 %tmp.334;
+        %tmp.336 = add %tmp.331 %tmp.335;
+        %tmp.337 = 5;
+        %tmp.338 = add %tmp.336 %tmp.337;
+        %tmp.340 = getv ? :hrRecY;
+        %tmp.341 = 2;
+        %tmp.342 = sub %tmp.340 %tmp.341;
+        %tmp.344 = getv ? :hrRecWidth;
+        %tmp.346 = getv ? :herRectheight;
+        %tmp.347 = 4;
+        %tmp.348 = add %tmp.346 %tmp.347;
+        invoke %tmp.328 %tmp.329(%tmp.338, %tmp.342, %tmp.344, %tmp.348);
+C_Garmin_Connect_Standard_source_StandardView_mc_124_35_127_12_stop:
         goto @C_Garmin_Connect_Standard_source_StandardView_mc_124_18_130_12_if_end;
 C_Garmin_Connect_Standard_source_StandardView_mc_124_18_130_12_if_false:
 [ "C:\Garmin Connect\Standard\source\StandardView.mc" 127 18 ]
 C_Garmin_Connect_Standard_source_StandardView_mc_127_18_130_12_if_stmt:
-        %tmp.354 = getv ? :hrValue;
-        %tmp.355 = getv function %tmp.354 :toNumber;
-        %tmp.356 = invoke %tmp.354 %tmp.355();
-        %tmp.357 = 50;
-        %tmp.358 = gte %tmp.356 %tmp.357;
-        bf %tmp.358 @C_Garmin_Connect_Standard_source_StandardView_mc_127_18_130_12_if_end;
+        %tmp.350 = getv ? :hrValue;
+        %tmp.351 = 50;
+        %tmp.352 = gte %tmp.350 %tmp.351;
+        bf %tmp.352 @C_Garmin_Connect_Standard_source_StandardView_mc_127_18_130_12_if_end;
 C_Garmin_Connect_Standard_source_StandardView_mc_127_18_130_12_if_true:
-C_Garmin_Connect_Standard_source_StandardView_mc_127_46_130_12_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 128 20 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_127_35_130_12_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 128 16 ]
+        %tmp.353 = lgetv %dc;
+        %tmp.354 = getv function %tmp.353 :setColor;
+        %tmp.355 = getm $.Toybox.Graphics;
+        %tmp.356 = getv %tmp.355 :COLOR_WHITE;
+        %tmp.357 = getm $.Toybox.Graphics;
+        %tmp.358 = getv %tmp.357 :COLOR_BLACK;
+        invoke %tmp.353 %tmp.354(%tmp.356, %tmp.358);
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 129 16 ]
         %tmp.359 = lgetv %dc;
-        %tmp.360 = getv function %tmp.359 :setColor;
-        %tmp.361 = getm $.Toybox.Graphics;
-        %tmp.362 = getv %tmp.361 :COLOR_WHITE;
-        %tmp.363 = getm $.Toybox.Graphics;
-        %tmp.364 = getv %tmp.363 :COLOR_BLACK;
-        invoke %tmp.359 %tmp.360(%tmp.362, %tmp.364);
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 129 20 ]
-        %tmp.365 = lgetv %dc;
-        %tmp.366 = getv function %tmp.365 :fillRectangle;
-        %tmp.368 = getv ? :hrRecX;
-        %tmp.370 = getv ? :hrRecWidth;
-        %tmp.371 = add %tmp.368 %tmp.370;
-        %tmp.373 = getv ? :hrRecY;
-        %tmp.374 = 2;
-        %tmp.375 = sub %tmp.373 %tmp.374;
-        %tmp.377 = getv ? :hrRecWidth;
-        %tmp.379 = getv ? :herRectheight;
-        %tmp.380 = 4;
-        %tmp.381 = add %tmp.379 %tmp.380;
-        invoke %tmp.365 %tmp.366(%tmp.371, %tmp.375, %tmp.377, %tmp.381);
-C_Garmin_Connect_Standard_source_StandardView_mc_127_46_130_12_stop:
+        %tmp.360 = getv function %tmp.359 :fillRectangle;
+        %tmp.362 = getv ? :hrRecX;
+        %tmp.364 = getv ? :hrRecWidth;
+        %tmp.365 = add %tmp.362 %tmp.364;
+        %tmp.367 = getv ? :hrRecY;
+        %tmp.368 = 2;
+        %tmp.369 = sub %tmp.367 %tmp.368;
+        %tmp.371 = getv ? :hrRecWidth;
+        %tmp.373 = getv ? :herRectheight;
+        %tmp.374 = 4;
+        %tmp.375 = add %tmp.373 %tmp.374;
+        invoke %tmp.359 %tmp.360(%tmp.365, %tmp.369, %tmp.371, %tmp.375);
+C_Garmin_Connect_Standard_source_StandardView_mc_127_35_130_12_stop:
         goto @C_Garmin_Connect_Standard_source_StandardView_mc_127_18_130_12_if_end;
 C_Garmin_Connect_Standard_source_StandardView_mc_127_18_130_12_if_end:
 C_Garmin_Connect_Standard_source_StandardView_mc_124_18_130_12_if_end:
 C_Garmin_Connect_Standard_source_StandardView_mc_121_18_130_12_if_end:
 C_Garmin_Connect_Standard_source_StandardView_mc_118_18_130_12_if_end:
 C_Garmin_Connect_Standard_source_StandardView_mc_115_12_130_12_if_end:
-C_Garmin_Connect_Standard_source_StandardView_mc_97_27_131_6_stop:
-        goto @C_Garmin_Connect_Standard_source_StandardView_mc_97_8_131_6_if_end;
-C_Garmin_Connect_Standard_source_StandardView_mc_97_8_131_6_if_end:
-C_Garmin_Connect_Standard_source_StandardView_mc_49_40_133_4_stop:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 132 12 ]
+        %tmp.377 = getv ? :hrRecX;
+        %tmp.379 = getv ? :hrValue;
+        %tmp.380 = 30;
+        %tmp.381 = sub %tmp.379 %tmp.380;
+        %tmp.382 = 200;
+        %tmp.383 = mul %tmp.381 %tmp.382;
+        %tmp.384 = 130;
+        %tmp.385 = div %tmp.383 %tmp.384;
+        %tmp.386 = add %tmp.377 %tmp.385;
+        putv self :x_point %tmp.386;
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 133 12 ]
+        %tmp.387 = getm $.Toybox.System;
+        %tmp.388 = getv function %tmp.387 :println;
+        %tmp.390 = getv ? :x_point;
+        invoke %tmp.387 %tmp.388(%tmp.390);
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 134 12 ]
+        %tmp.391 = lgetv %dc;
+        %tmp.392 = getv function %tmp.391 :setColor;
+        %tmp.393 = getm $.Toybox.Graphics;
+        %tmp.394 = getv %tmp.393 :COLOR_WHITE;
+        %tmp.395 = getm $.Toybox.Graphics;
+        %tmp.396 = getv %tmp.395 :COLOR_BLACK;
+        invoke %tmp.391 %tmp.392(%tmp.394, %tmp.396);
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 135 12 ]
+        %tmp.397 = lgetv %dc;
+        %tmp.398 = getv function %tmp.397 :fillPolygon;
+        %tmp.399 = newa 3;
+        %tmp.400 = newa 2;
+        %tmp.402 = getv ? :x_point;
+        %tmp.403 = dup %tmp.400;
+        %tmp.404 = aputv %tmp.403 0 %tmp.402;
+        %tmp.406 = getv ? :hrRecY;
+        %tmp.407 = 5;
+        %tmp.408 = add %tmp.406 %tmp.407;
+        %tmp.409 = dup %tmp.404;
+        %tmp.410 = aputv %tmp.409 1 %tmp.408;
+        %tmp.411 = dup %tmp.399;
+        %tmp.412 = aputv %tmp.411 0 %tmp.410;
+        %tmp.413 = newa 2;
+        %tmp.415 = getv ? :x_point;
+        %tmp.416 = 10;
+        %tmp.417 = sub %tmp.415 %tmp.416;
+        %tmp.418 = dup %tmp.413;
+        %tmp.419 = aputv %tmp.418 0 %tmp.417;
+        %tmp.421 = getv ? :hrRecY;
+        %tmp.422 = 25;
+        %tmp.423 = add %tmp.421 %tmp.422;
+        %tmp.424 = dup %tmp.419;
+        %tmp.425 = aputv %tmp.424 1 %tmp.423;
+        %tmp.426 = dup %tmp.412;
+        %tmp.427 = aputv %tmp.426 1 %tmp.425;
+        %tmp.428 = newa 2;
+        %tmp.430 = getv ? :x_point;
+        %tmp.431 = 10;
+        %tmp.432 = add %tmp.430 %tmp.431;
+        %tmp.433 = dup %tmp.428;
+        %tmp.434 = aputv %tmp.433 0 %tmp.432;
+        %tmp.436 = getv ? :hrRecY;
+        %tmp.437 = 25;
+        %tmp.438 = add %tmp.436 %tmp.437;
+        %tmp.439 = dup %tmp.434;
+        %tmp.440 = aputv %tmp.439 1 %tmp.438;
+        %tmp.441 = dup %tmp.427;
+        %tmp.442 = aputv %tmp.441 2 %tmp.440;
+        invoke %tmp.397 %tmp.398(%tmp.442);
+C_Garmin_Connect_Standard_source_StandardView_mc_98_27_136_6_stop:
+        goto @C_Garmin_Connect_Standard_source_StandardView_mc_98_8_136_6_if_end;
+C_Garmin_Connect_Standard_source_StandardView_mc_98_8_136_6_if_end:
+C_Garmin_Connect_Standard_source_StandardView_mc_50_40_138_4_stop:
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 138; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 143; ]
     function onHide() as Void {
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 142; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 147; ]
     function onExitSleep() as Void {
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 147; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 152; ]
     function onEnterSleep() as Void {
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 151; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 156; ]
     function showCurrentTime() as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 152 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_stop" ]
+C_Garmin_Connect_Standard_source_StandardView_mc_156_39_161_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 157 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_156_39_161_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_156_39_161_4_stop" ]
         %clockTime.1 = local;
         %tmp.1 = getm $.Toybox.System;
         %tmp.2 = getv function %tmp.1 :getClockTime;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %clockTime.1 %tmp.3;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 153 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 158 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_156_39_161_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_156_39_161_4_stop" ]
         %timeString.2 = local;
         %tmp.4 = getm $.Toybox.Lang;
         %tmp.5 = getv function %tmp.4 :format;
@@ -589,8 +652,8 @@ C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_start:
         %tmp.18 = aputv %tmp.17 1 %tmp.16;
         %tmp.19 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.18);
         lputv %timeString.2 %tmp.19;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 154 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 159 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_156_39_161_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_156_39_161_4_stop" ]
         %view.3 = local;
         %tmp.21 = getv ? :View;
         %tmp.22 = getv function %tmp.21 :findDrawableById;
@@ -598,24 +661,24 @@ C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_start:
         %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
         %tmp.25 = as %tmp.24 Text;
         lputv %view.3 %tmp.25;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 155 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 160 8 ]
         %tmp.26 = lgetv %view.3;
         %tmp.27 = getv function %tmp.26 :setText;
         %tmp.29 = lgetv %timeString.2;
         invoke %tmp.26 %tmp.27(%tmp.29);
-C_Garmin_Connect_Standard_source_StandardView_mc_151_39_156_4_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_156_39_161_4_stop:
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 159; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 164; ]
     function showDailySteps() as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_159_38_164_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 160 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_164_38_169_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 165 8 ]
         %tmp.2 = getv ? :ActivityMonitor;
         %tmp.3 = getv function %tmp.2 :getInfo;
         %tmp.4 = invoke %tmp.2 %tmp.3();
         %tmp.5 = getv %tmp.4 :steps;
         putv self :steps %tmp.5;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 161 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_159_38_164_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_159_38_164_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 166 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_164_38_169_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_164_38_169_4_stop" ]
         %stepDisplay.1 = local;
         %tmp.7 = getv ? :View;
         %tmp.8 = getv function %tmp.7 :findDrawableById;
@@ -623,8 +686,8 @@ C_Garmin_Connect_Standard_source_StandardView_mc_159_38_164_4_start:
         %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
         %tmp.11 = as %tmp.10 Text;
         lputv %stepDisplay.1 %tmp.11;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 162 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_159_38_164_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_159_38_164_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 167 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_164_38_169_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_164_38_169_4_stop" ]
         %stepsString.2 = local;
         %tmp.12 = "Steps: ";
         %tmp.14 = getv ? :steps;
@@ -633,24 +696,24 @@ C_Garmin_Connect_Standard_source_StandardView_mc_159_38_164_4_start:
         %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
         %tmp.18 = add %tmp.12 %tmp.17;
         lputv %stepsString.2 %tmp.18;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 163 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 168 8 ]
         %tmp.19 = lgetv %stepDisplay.1;
         %tmp.20 = getv function %tmp.19 :setText;
         %tmp.22 = lgetv %stepsString.2;
         invoke %tmp.19 %tmp.20(%tmp.22);
-C_Garmin_Connect_Standard_source_StandardView_mc_159_38_164_4_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_164_38_169_4_stop:
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 167; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 172; ]
     function showDailyCalories() as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_167_41_172_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 168 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_172_41_177_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 173 8 ]
         %tmp.2 = getv ? :ActivityMonitor;
         %tmp.3 = getv function %tmp.2 :getInfo;
         %tmp.4 = invoke %tmp.2 %tmp.3();
         %tmp.5 = getv %tmp.4 :calories;
         putv self :cals %tmp.5;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 169 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_167_41_172_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_167_41_172_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 174 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_172_41_177_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_172_41_177_4_stop" ]
         %calsDisplay.1 = local;
         %tmp.7 = getv ? :View;
         %tmp.8 = getv function %tmp.7 :findDrawableById;
@@ -658,8 +721,8 @@ C_Garmin_Connect_Standard_source_StandardView_mc_167_41_172_4_start:
         %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
         %tmp.11 = as %tmp.10 Text;
         lputv %calsDisplay.1 %tmp.11;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 170 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_167_41_172_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_167_41_172_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 175 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_172_41_177_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_172_41_177_4_stop" ]
         %calsString.2 = local;
         %tmp.12 = "Cals: ";
         %tmp.14 = getv ? :cals;
@@ -668,24 +731,24 @@ C_Garmin_Connect_Standard_source_StandardView_mc_167_41_172_4_start:
         %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
         %tmp.18 = add %tmp.12 %tmp.17;
         lputv %calsString.2 %tmp.18;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 171 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 176 8 ]
         %tmp.19 = lgetv %calsDisplay.1;
         %tmp.20 = getv function %tmp.19 :setText;
         %tmp.22 = lgetv %calsString.2;
         invoke %tmp.19 %tmp.20(%tmp.22);
-C_Garmin_Connect_Standard_source_StandardView_mc_167_41_172_4_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_172_41_177_4_stop:
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 175; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 180; ]
     function showHeartRate() as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_175_37_185_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 176 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_180_37_190_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 181 8 ]
         %tmp.1 = getm $.Toybox.Activity;
         %tmp.2 = getv function %tmp.1 :getActivityInfo;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         %tmp.4 = getv %tmp.3 :currentHeartRate;
         putv self :hrValue %tmp.4;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 177 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_175_37_185_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_175_37_185_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 182 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_180_37_190_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_180_37_190_4_stop" ]
         %hrDisplay.1 = local;
         %tmp.6 = getv ? :View;
         %tmp.7 = getv function %tmp.6 :findDrawableById;
@@ -693,60 +756,53 @@ C_Garmin_Connect_Standard_source_StandardView_mc_175_37_185_4_start:
         %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
         %tmp.10 = as %tmp.9 Text;
         lputv %hrDisplay.1 %tmp.10;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 178 8 ]
-C_Garmin_Connect_Standard_source_StandardView_mc_178_8_184_8_if_stmt:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 183 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_183_8_189_8_if_stmt:
         %tmp.12 = getv ? :hrValue;
         %tmp.13 = null;
         %tmp.14 = ne %tmp.12 %tmp.13;
-        bf %tmp.14 @C_Garmin_Connect_Standard_source_StandardView_mc_178_8_184_8_if_false;
-C_Garmin_Connect_Standard_source_StandardView_mc_178_8_184_8_if_true:
-C_Garmin_Connect_Standard_source_StandardView_mc_178_28_181_8_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 179 12 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_178_28_181_8_start" "C_Garmin_Connect_Standard_source_StandardView_mc_178_28_181_8_stop" ]
+        bf %tmp.14 @C_Garmin_Connect_Standard_source_StandardView_mc_183_8_189_8_if_false;
+C_Garmin_Connect_Standard_source_StandardView_mc_183_8_189_8_if_true:
+C_Garmin_Connect_Standard_source_StandardView_mc_183_28_186_8_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 184 12 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_183_28_186_8_start" "C_Garmin_Connect_Standard_source_StandardView_mc_183_28_186_8_stop" ]
         %hrString.2 = local;
-        %tmp.15 = "HR: ";
-        %tmp.17 = getv ? :hrValue;
-        %tmp.18 = as %tmp.17 { (!Null) };
-        %tmp.19 = getv function %tmp.18 :format;
-        %tmp.20 = "%d";
-        %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
-        %tmp.22 = add %tmp.15 %tmp.21;
-        lputv %hrString.2 %tmp.22;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 180 12 ]
-        %tmp.23 = lgetv %hrDisplay.1;
-        %tmp.24 = getv function %tmp.23 :setText;
-        %tmp.26 = lgetv %hrString.2;
-        invoke %tmp.23 %tmp.24(%tmp.26);
-C_Garmin_Connect_Standard_source_StandardView_mc_178_28_181_8_stop:
-        goto @C_Garmin_Connect_Standard_source_StandardView_mc_178_8_184_8_if_end;
-C_Garmin_Connect_Standard_source_StandardView_mc_178_8_184_8_if_false:
-C_Garmin_Connect_Standard_source_StandardView_mc_181_15_184_8_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 182 12 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_181_15_184_8_start" "C_Garmin_Connect_Standard_source_StandardView_mc_181_15_184_8_stop" ]
+        %tmp.16 = getv ? :hrValue;
+        %tmp.17 = as %tmp.16 { (!Null) };
+        %tmp.18 = getv function %tmp.17 :format;
+        %tmp.19 = "%d";
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        lputv %hrString.2 %tmp.20;
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 185 12 ]
+        %tmp.21 = lgetv %hrDisplay.1;
+        %tmp.22 = getv function %tmp.21 :setText;
+        %tmp.24 = lgetv %hrString.2;
+        invoke %tmp.21 %tmp.22(%tmp.24);
+C_Garmin_Connect_Standard_source_StandardView_mc_183_28_186_8_stop:
+        goto @C_Garmin_Connect_Standard_source_StandardView_mc_183_8_189_8_if_end;
+C_Garmin_Connect_Standard_source_StandardView_mc_183_8_189_8_if_false:
+C_Garmin_Connect_Standard_source_StandardView_mc_186_15_189_8_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 187 12 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_186_15_189_8_start" "C_Garmin_Connect_Standard_source_StandardView_mc_186_15_189_8_stop" ]
         %hrString.3 = local;
-        %tmp.27 = "HR: --";
-        lputv %hrString.3 %tmp.27;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 183 12 ]
-        %tmp.28 = lgetv %hrDisplay.1;
-        %tmp.29 = getv function %tmp.28 :setText;
-        %tmp.31 = lgetv %hrString.3;
-        invoke %tmp.28 %tmp.29(%tmp.31);
-C_Garmin_Connect_Standard_source_StandardView_mc_181_15_184_8_stop:
-C_Garmin_Connect_Standard_source_StandardView_mc_178_8_184_8_if_end:
-C_Garmin_Connect_Standard_source_StandardView_mc_175_37_185_4_stop:
+        %tmp.25 = "HR: --";
+        lputv %hrString.3 %tmp.25;
+C_Garmin_Connect_Standard_source_StandardView_mc_186_15_189_8_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_183_8_189_8_if_end:
+C_Garmin_Connect_Standard_source_StandardView_mc_180_37_190_4_stop:
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 188; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 193; ]
     function showIntensityMinutes() as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_188_44_198_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 189 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_193_44_203_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 194 8 ]
         %tmp.2 = getv ? :ActivityMonitor;
         %tmp.3 = getv function %tmp.2 :getInfo;
         %tmp.4 = invoke %tmp.2 %tmp.3();
         %tmp.5 = getv %tmp.4 :activeMinutesWeek;
         %tmp.6 = getv %tmp.5 :total;
         putv self :intMinutes %tmp.6;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 190 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_188_44_198_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_188_44_198_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 195 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_193_44_203_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_193_44_203_4_stop" ]
         %intMinutesDisplay.1 = local;
         %tmp.8 = getv ? :View;
         %tmp.9 = getv function %tmp.8 :findDrawableById;
@@ -754,18 +810,18 @@ C_Garmin_Connect_Standard_source_StandardView_mc_188_44_198_4_start:
         %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
         %tmp.12 = as %tmp.11 Text;
         lputv %intMinutesDisplay.1 %tmp.12;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 191 8 ]
-C_Garmin_Connect_Standard_source_StandardView_mc_191_8_197_8_if_stmt:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 196 8 ]
+C_Garmin_Connect_Standard_source_StandardView_mc_196_8_202_8_if_stmt:
         %tmp.14 = getv ? :intMinutes;
         %tmp.15 = null;
         %tmp.16 = ne %tmp.14 %tmp.15;
-        bf %tmp.16 @C_Garmin_Connect_Standard_source_StandardView_mc_191_8_197_8_if_false;
-C_Garmin_Connect_Standard_source_StandardView_mc_191_8_197_8_if_true:
-C_Garmin_Connect_Standard_source_StandardView_mc_191_31_194_8_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 192 12 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_191_31_194_8_start" "C_Garmin_Connect_Standard_source_StandardView_mc_191_31_194_8_stop" ]
+        bf %tmp.16 @C_Garmin_Connect_Standard_source_StandardView_mc_196_8_202_8_if_false;
+C_Garmin_Connect_Standard_source_StandardView_mc_196_8_202_8_if_true:
+C_Garmin_Connect_Standard_source_StandardView_mc_196_31_199_8_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 197 12 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_196_31_199_8_start" "C_Garmin_Connect_Standard_source_StandardView_mc_196_31_199_8_stop" ]
         %intMinutesString.2 = local;
-        %tmp.17 = "Int Minutes: ";
+        %tmp.17 = "Int: ";
         %tmp.19 = getv ? :intMinutes;
         %tmp.20 = as %tmp.19 { (!Null) };
         %tmp.21 = getv function %tmp.20 :format;
@@ -773,34 +829,34 @@ C_Garmin_Connect_Standard_source_StandardView_mc_191_31_194_8_start:
         %tmp.23 = invoke %tmp.20 %tmp.21(%tmp.22);
         %tmp.24 = add %tmp.17 %tmp.23;
         lputv %intMinutesString.2 %tmp.24;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 193 12 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 198 12 ]
         %tmp.25 = lgetv %intMinutesDisplay.1;
         %tmp.26 = getv function %tmp.25 :setText;
         %tmp.28 = lgetv %intMinutesString.2;
         invoke %tmp.25 %tmp.26(%tmp.28);
-C_Garmin_Connect_Standard_source_StandardView_mc_191_31_194_8_stop:
-        goto @C_Garmin_Connect_Standard_source_StandardView_mc_191_8_197_8_if_end;
-C_Garmin_Connect_Standard_source_StandardView_mc_191_8_197_8_if_false:
-C_Garmin_Connect_Standard_source_StandardView_mc_194_15_197_8_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 195 12 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_194_15_197_8_start" "C_Garmin_Connect_Standard_source_StandardView_mc_194_15_197_8_stop" ]
+C_Garmin_Connect_Standard_source_StandardView_mc_196_31_199_8_stop:
+        goto @C_Garmin_Connect_Standard_source_StandardView_mc_196_8_202_8_if_end;
+C_Garmin_Connect_Standard_source_StandardView_mc_196_8_202_8_if_false:
+C_Garmin_Connect_Standard_source_StandardView_mc_199_15_202_8_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 200 12 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_199_15_202_8_start" "C_Garmin_Connect_Standard_source_StandardView_mc_199_15_202_8_stop" ]
         %intMinutesString.3 = local;
-        %tmp.29 = "Int Minutes: --";
+        %tmp.29 = "Int: 0";
         lputv %intMinutesString.3 %tmp.29;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 196 12 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 201 12 ]
         %tmp.30 = lgetv %intMinutesDisplay.1;
         %tmp.31 = getv function %tmp.30 :setText;
         %tmp.33 = lgetv %intMinutesString.3;
         invoke %tmp.30 %tmp.31(%tmp.33);
-C_Garmin_Connect_Standard_source_StandardView_mc_194_15_197_8_stop:
-C_Garmin_Connect_Standard_source_StandardView_mc_191_8_197_8_if_end:
-C_Garmin_Connect_Standard_source_StandardView_mc_188_44_198_4_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_199_15_202_8_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_196_8_202_8_if_end:
+C_Garmin_Connect_Standard_source_StandardView_mc_193_44_203_4_stop:
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 201; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 206; ]
     function showDayOfWeek() as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_201_37_205_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 202 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_201_37_205_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_201_37_205_4_stop" ]
+C_Garmin_Connect_Standard_source_StandardView_mc_206_37_210_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 207 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_206_37_210_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_206_37_210_4_stop" ]
         %date.1 = local;
         %tmp.1 = getm $.Toybox.Time.Gregorian;
         %tmp.2 = getv function %tmp.1 :info;
@@ -811,8 +867,8 @@ C_Garmin_Connect_Standard_source_StandardView_mc_201_37_205_4_start:
         %tmp.9 = getv %tmp.8 :FORMAT_SHORT;
         %tmp.10 = invoke %tmp.1 %tmp.2(%tmp.6, %tmp.9);
         lputv %date.1 %tmp.10;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 203 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_201_37_205_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_201_37_205_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 208 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_206_37_210_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_206_37_210_4_stop" ]
         %dayOfWeek.2 = local;
         %tmp.12 = getv ? :View;
         %tmp.13 = getv function %tmp.12 :findDrawableById;
@@ -820,7 +876,7 @@ C_Garmin_Connect_Standard_source_StandardView_mc_201_37_205_4_start:
         %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
         %tmp.16 = as %tmp.15 Text;
         lputv %dayOfWeek.2 %tmp.16;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 204 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 209 8 ]
         %tmp.17 = lgetv %dayOfWeek.2;
         %tmp.18 = getv function %tmp.17 :setText;
         %tmp.19 = newa 7;
@@ -851,13 +907,13 @@ C_Garmin_Connect_Standard_source_StandardView_mc_201_37_205_4_start:
         %tmp.44 = sub %tmp.42 %tmp.43;
         %tmp.45 = agetv %tmp.40 %tmp.44;
         invoke %tmp.17 %tmp.18(%tmp.45);
-C_Garmin_Connect_Standard_source_StandardView_mc_201_37_205_4_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_206_37_210_4_stop:
     }
-    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 208; ]
+    [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 213; ]
     function showDateOfToday() as Void {
-C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_start:
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 209 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_stop" ]
+C_Garmin_Connect_Standard_source_StandardView_mc_213_39_218_4_start:
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 214 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_213_39_218_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_213_39_218_4_stop" ]
         %today.1 = local;
         %tmp.1 = getm $.Toybox.Time.Gregorian;
         %tmp.2 = getv function %tmp.1 :info;
@@ -868,8 +924,8 @@ C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_start:
         %tmp.9 = getv %tmp.8 :FORMAT_MEDIUM;
         %tmp.10 = invoke %tmp.1 %tmp.2(%tmp.6, %tmp.9);
         lputv %today.1 %tmp.10;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 210 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 215 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_213_39_218_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_213_39_218_4_stop" ]
         %dayString.2 = local;
         %tmp.11 = lgetv %today.1;
         %tmp.12 = getv %tmp.11 :day;
@@ -877,8 +933,8 @@ C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_start:
         %tmp.14 = "%d";
         %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
         lputv %dayString.2 %tmp.15;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 211 8 ]
-        [ "C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_stop" ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 216 8 ]
+        [ "C_Garmin_Connect_Standard_source_StandardView_mc_213_39_218_4_start" "C_Garmin_Connect_Standard_source_StandardView_mc_213_39_218_4_stop" ]
         %dayView.3 = local;
         %tmp.17 = getv ? :View;
         %tmp.18 = getv function %tmp.17 :findDrawableById;
@@ -886,12 +942,12 @@ C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_start:
         %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
         %tmp.21 = as %tmp.20 Text;
         lputv %dayView.3 %tmp.21;
-[ "C:\Garmin Connect\Standard\source\StandardView.mc" 212 8 ]
+[ "C:\Garmin Connect\Standard\source\StandardView.mc" 217 8 ]
         %tmp.22 = lgetv %dayView.3;
         %tmp.23 = getv function %tmp.22 :setText;
         %tmp.25 = lgetv %dayString.2;
         invoke %tmp.22 %tmp.23(%tmp.25);
-C_Garmin_Connect_Standard_source_StandardView_mc_208_39_213_4_stop:
+C_Garmin_Connect_Standard_source_StandardView_mc_213_39_218_4_stop:
     }
 }
 [ @file = "C:\Garmin Connect\Standard\source\StandardView.mc"; @line = 1; ]
